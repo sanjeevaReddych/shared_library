@@ -11,8 +11,10 @@ sh '''
 
 
 def create_build(dir, build_function){
+	
 
- sh '''            
+ sh '''         
+	    echo $dir   
             cd "${dir}"
             bazel build //main: "${build_function}"
               '''
