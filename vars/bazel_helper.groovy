@@ -11,9 +11,8 @@ sh '''
 
 
 def create_build(Map args){
- echo "dir1 ${args.dir1}"
 
- sh(script: """ cd ${args.dir1}
+ sh(script: """ cd ${args.build_path}
              bazel build //main: ${args.build_function}""")
 
 }
