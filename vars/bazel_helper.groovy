@@ -10,10 +10,10 @@ sh '''
 }
 
 
-def create_build(dir1, build_function){
- echo dir1
+def create_build(dir, build_function){
+ echo 'dir1 ${dir}'
 
- sh(script: ''' cd ${dir1}
+ sh(script: ''' cd ${dir}
              bazel build //main: ${build_function}''')
 
 }
