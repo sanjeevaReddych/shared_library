@@ -11,11 +11,8 @@ sh '''
 
 
 def create_build(dir, build_function){
-	
 
- sh '''         
-	    echo $dir   
-            cd "${dir}"
-            bazel build //main: "${build_function}"
-              '''
+ sh(script: "cd ${dir}
+             bazel build //main: ${build_function}")
+
 }
