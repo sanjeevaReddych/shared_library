@@ -13,6 +13,6 @@ sh '''
 def create_build(Map args){
 
  sh(script: """ cd ${args.build_path}
-             bazel build //main: ${args.build_function}""")
+             bazel build //main:${args.build_function}""")
 
 }
